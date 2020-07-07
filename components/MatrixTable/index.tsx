@@ -83,8 +83,8 @@ import { MatrixTableContext, MatrixTableContextProvider } from './context'
             ) : (
               <>
                 <td><input type='number' defaultValue={matrix[keyName].lite} onChange={event => dispatch({type: 'EDIT_ACTION', payload: {keyName, fieldName: 'lite', value: event.target.value}})} /></td>
-                <td><input type='number' defaultValue={matrix[keyName].standard} /></td>
-                <td><input type='number' defaultValue={matrix[keyName].unlimited} /></td>
+                <td><input type='number' defaultValue={matrix[keyName].standard}  onChange={event => dispatch({type: 'EDIT_ACTION', payload: {keyName, fieldName: 'standard', value: event.target.value}})}/></td>
+                <td><input type='number' defaultValue={matrix[keyName].unlimited}  onChange={event => dispatch({type: 'EDIT_ACTION', payload: {keyName, fieldName: 'unlimited', value: event.target.value}})} /></td>
               </>
             )}
           </tr>

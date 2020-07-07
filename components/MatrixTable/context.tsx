@@ -125,6 +125,11 @@ const reducer = (state: MatrixTableState, action: MatrixAction): MatrixTableStat
       }
     case 'EDIT_ACTION':
       state.matrix[action.payload.keyName][action.payload.fieldName] = action.payload.value;
+    
+      if(action.payload.fieldName == "lite"){
+        state.matrix[action.payload.keyName].standard = action.payload.value * 2;
+        state.matrix[action.payload.keyName].unlimited = action.payload.value * 3;
+      }
       return {
         ...state
       }
