@@ -42,6 +42,7 @@ import { MatrixTableContext, MatrixTableContextProvider } from './context'
 
   // You can save (to api) the matrix here. Remember to update originalMatrix when done.
   const save = async () => {
+    setEnableEdit(true);
     dispatch({type: 'SAVE_JSON'});
   }
   
