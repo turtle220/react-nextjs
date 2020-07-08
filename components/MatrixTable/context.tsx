@@ -47,7 +47,6 @@ type MatrixAction = {
   payload?: import('../../types').Matrix
 } | {
   type: 'SAVE_JSON',
-  payload: any
 } | {
   type: 'EDIT_ACTION',
   payload: any
